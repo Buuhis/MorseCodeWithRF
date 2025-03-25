@@ -3,13 +3,26 @@
 ## Project Overview
 The ultimate goal of this project is to enable Morse code communication between two Raspberry Pi Pico boards using the RF24 module.
 
-## Initial Testing
-Before implementing Morse code communication, we will verify basic communication between the two microcontrollers:
-- **Transmitter (picoTx):** A button will be connected to **GP22**.
-- **Receiver (picoRx):** An LED will be connected to **GP25**.
-- When the button on **picoTx** is pressed, the LED on **picoRx** will toggle its state.
+## Project Development Progress
+After successfully establishing communication between the two microcontrollers, the next step is to transmit Morse code using `3 buttons` and `2 LEDs` to indicate the received signals.
 
-This test ensures that the RF24 module is functioning correctly before proceeding with Morse code transmission.
+## Hardware Setup
+### picoTx (Transmitter)
+- **Buttons:**
+  - GP22: Dot button
+  - GP13: Dash button
+  - GP14: Send button
+- **NRF24 Module:**
+  - CSN: GP17
+  - CE: GP6
+
+### picoRx (Receiver)
+- **LEDs:**
+  - GP15: LED for dot signal
+  - GP25: LED for dash signal
+- **NRF24 Module:**
+  - CSN: GP17
+  - CE: GP6
 
 ## How to Run and Test the Code
 ### Requirement
@@ -28,5 +41,3 @@ First, you need to have the Pico SDK installed: [Pico SDK GitHub](https://github
    ```bash
    make
    ```
-
-
