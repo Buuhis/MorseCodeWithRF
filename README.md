@@ -4,7 +4,9 @@
 The ultimate goal of this project is to enable Morse code communication between two Raspberry Pi Pico boards using the RF24 module.
 
 ## Project Development Progress
-After successfully establishing communication between the two microcontrollers, the next step is to transmit Morse code using `3 buttons` and `2 LEDs` to indicate the received signals.
+In this update, we will integrate `3 buttons` for sending, along with a `buzzer and an SH1106 OLED display` for outputting and displaying the content. 
+
+**`To clear the screen, press BUTTON_SEND 3 times.`**
 
 ## Hardware Setup
 ### picoTx (Transmitter)
@@ -23,6 +25,10 @@ After successfully establishing communication between the two microcontrollers, 
 - **NRF24 Module:**
   - CSN: GP17
   - CE: GP6
+- **Buzzer:**
+  - GP16: Buzzer output
+- **SH1106 OLED Display:**
+  - I2C Communication (SDA: GP4, SCL: GP5)
 
 ## How to Run and Test the Code
 ### Requirement

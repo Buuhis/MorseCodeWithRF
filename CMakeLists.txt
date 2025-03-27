@@ -20,7 +20,9 @@ pico_add_extra_outputs(pico_tx)
 add_executable(pico_rx
     src/pico_rx.cpp
     src/NRF24.cpp
+    src/SH1106.cpp  # Thêm file SH1106.cpp
 )
 target_include_directories(pico_rx PUBLIC inc)
-target_link_libraries(pico_rx pico_stdlib hardware_spi)
+target_link_libraries(pico_rx pico_stdlib hardware_spi hardware_i2c) # Thêm hardware_i2c
 pico_add_extra_outputs(pico_rx)
+
